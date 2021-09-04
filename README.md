@@ -21,3 +21,15 @@ Australian Government Bureau of Meteorology
 
 ## Communication Protocols
 Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
+
+## Database Integration Summary
+- Importation of pandas, numpy, and datetime
+- Loading weatherAus.csv dataset
+- Data pre-processing including dropping unnecessary columns and missing data
+- Creation of database
+- Import ‘weather_aus_subset’ into the database
+
+##Machine Learning Model
+
+
+
