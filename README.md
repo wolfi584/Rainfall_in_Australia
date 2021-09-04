@@ -13,4 +13,6 @@ Drought has always been a problem in Australia. Lack of rainfall has a negative 
 -	Livestock casualties from lack of food available
 -	Water shortages
 
+## Questions We Hope to Answer 
+Will accurate long-term weather forecasting help Australians to prepare for drought? Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing. Providing advanced notice of approaching drought can help Australians prepare.
 
