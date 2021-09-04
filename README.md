@@ -18,3 +18,6 @@ Will accurate long-term weather forecasting help Australians to prepare for drou
 
 ## Data Source 
 Australian Government Bureau of Meteorology
+
+## Communication Protocols
+Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
