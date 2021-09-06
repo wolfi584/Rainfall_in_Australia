@@ -29,7 +29,7 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Creation of database
 - Import ‘weather_aus_subset’ into the database
 
-## Machine Learning Model
+## Machine Learning Model Summary
 
 
 
