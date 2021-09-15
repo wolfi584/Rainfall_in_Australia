@@ -1,10 +1,10 @@
 # Rainfall_in_Australia
 
 ## Selected Topic 
-Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2012-2017. Research results will be used to predict drought in 2018 for each of the six Australian states. 
+Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2011-2016. Different machine learning methods will be tested to determine which model most accuratley predicts rainfall in Australia for 2017. Forecasted results will then be compared with actual 2017 weather records. All information used during this project is from the same data source (Australian Government Bureau of Meteorology). 
 
 ## Explanation for Topic Selection 
-Drought has always been a problem in Australia. Lack of rainfall has a negative impact on nature and the economy.  Extreme dryness can cause the following:
+Lack of rainfall has a negative impact on nature and the economy, and drought has always been a problem in Australia. Extreme dryness can cause the following:
 
 -	Starting of wildfires 
 -	Disruption of animal habitats and ecosystems
@@ -14,7 +14,7 @@ Drought has always been a problem in Australia. Lack of rainfall has a negative 
 -	Water shortages
 
 ## Questions We Hope to Answer 
-Will accurate long-term weather forecasting help Australians to prepare for drought? Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing. Providing advanced notice of approaching drought can help Australians prepare.
+Which machine learning model will most accuratly predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall foreccast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
 
 ## Data Source 
 Australian Government Bureau of Meteorology
