@@ -30,18 +30,12 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Import ‘weather_aus_subset’ into the database
 
 ## Machine Learning Model Summary
-- Importation of libraries
-- Importation of dataset from Postgres
-- Splitting of data column to year, month, and day for regression preparation
-- Check for bucketing requirements
-- Update “RainToday” and “Rain Tommorow” columns to binary values
-- TBD: Possibility of handling class imbalance
-- Drop unnecessary columns and handle missing data
-- Apply OneHotEncoder
-- Declare variables and split into test/train
-- Scale data
-- Define machine learning model: evaluation of Randomforest, GBM, and  Logistic
-- Model validation: Accuracy Report, Confusion Matrix and Classification report
+Testing of different models including:
+- Random Forest Classifier
+- Logistic Regression
+- Adaptive Boosting
+- SMOTEEN
+- Linear Regression
 
 
 
