@@ -38,5 +38,18 @@ Testing of different models including:
 - Linear Regression
 
 
+## Interactive Visualization and Dashboard Blueprint
+### Interactive map of Australia created on Tableau
+- Drop down menu for viewing rainfall levels by year
+- Viewable on dashboard by creating embedded link and placed in HTML webpage code
+### Linear Regression
+- Actual vs. predicted model chart
+### Binary Model Comparison
+- Random Forest, Gradient Boosting, Logistic Regression
+- F1, Accuracy, Balanced Accuracy, Recall, and Precision scores
+
+
+
+
 
 
