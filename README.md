@@ -32,8 +32,8 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 ## Machine Learning Model Summary
 For machine learning piece, we decided to create two types of models:
 
-1) Binary classification model for predicting Rain Tomorrow
-2) Regression model to predict the amount of Rainfall in mm for a given day
+- Binary classification model for predicting Rain Tomorrow
+- Regression model to predict the amount of Rainfall in mm for a given day
 
 For each option above, different models were compared to find the best fit to achieve the desired results.
 
