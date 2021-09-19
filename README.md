@@ -30,12 +30,53 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Import ‘weather_aus_subset’ into the database
 
 ## Machine Learning Model Summary
-Testing of different models including:
-- Random Forest Classifier
-- Logistic Regression
-- Adaptive Boosting
-- SMOTEEN
-- Linear Regression
+For machine learning piece, we decided to create two types of models:
+
+1) Binary classification model for predicting Rain Tomorrow
+2) Regression model to predict the amount of Rainfall in mm for a given day
+
+For each option above, different models were compared to find the best fit to achieve the desired results.
+
+### Prelimiary Data Processing
+Data clean up involved the following steps:
+- Data was downloaded from Kaggle
+- We opted to use data from 2011-2016 for the model due to the availability of consistent and valid data points distribution for each year.
+- Handling of null/missing values was done by exploring three different solutions:
+    1)  Drop all null values in rows and columns
+    2)  Substitute null values with 9999
+    3)  Substitute numeric null columns with mean and non-numeric null columns with mode
+
+    **Recommendation:** TBD.
+- Handling Date Column: Date column was split and replaced by year, month and day columns
+- RainToday and RainTomorrow were converted from object (yes/no) columns to binary (1/0) values 
+
+### Feature Engineering and Selection
+
+**Binary Classification Model:** 
+- Categorical columns were encoded using OneHotEncoder
+- Target variable for the model: RainTomorrow
+- Training/Testing Data Split: We decided to use 80% of data for training and 20% for testing due to higher precision and accuracy score
+- Data was scaled using standed scaler
+- Class imbalance was addressed using Ramdom Oversampling due to high precision score as compared to SMOTE and SMOTEENN
+- Feature selection process was accomplished by using a combination of seaborn heatmap and model's feature importance 
+
+**Linear Regression:**
+- Training/Testing Data Split: We decided to do 70/30 split for Train and Test dataset for better precision.
+- Data was scaled using standed scaler
+- Feature selection process was done by using seaborn heatmap
+
+### Model Selection - Random Forest
+
+We decided to use Random Forest for both models (classification and regression) due to the following reasons:
+- For our dataset, we believe that precision score is a better measure of model performance as opposed to recall. Random forest produced the highest precision and balanced accuracy scores for the dataset compared to other model evaluated.
+- Random forest is robust against overfitting, outliers and large datasets
+- It works well for classification and regression problems
+- Its easier to work with if the dataset has lots of missing values
+
+However, there are some disadvantages to this model:
+- The model can be difficult to interpret.
+- It may require higher computational power and training time.
+- It can quickly reach a point where more samples may not improve precision/accuracy.
 
 
 ## Interactive Visualization and Dashboard Blueprint
