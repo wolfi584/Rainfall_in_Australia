@@ -1,10 +1,10 @@
 # Rainfall_in_Australia
 
 ## Selected Topic 
-Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2012-2017. Research results will be used to predict drought in 2018 for each of the six Australian states. 
+Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2011-2016. Different machine learning methods will be tested to determine which model most accuratley predicts rainfall in Australia for 2017. Forecasted results will then be compared with actual 2017 weather records. All information used during this project is from the same data source (Australian Government Bureau of Meteorology). 
 
 ## Explanation for Topic Selection 
-Drought has always been a problem in Australia. Lack of rainfall has a negative impact on nature and the economy.  Extreme dryness can cause the following:
+Lack of rainfall has a negative impact on nature and the economy, and drought has always been a problem in Australia. Extreme dryness can cause the following:
 
 -	Starting of wildfires 
 -	Disruption of animal habitats and ecosystems
@@ -14,7 +14,7 @@ Drought has always been a problem in Australia. Lack of rainfall has a negative 
 -	Water shortages
 
 ## Questions We Hope to Answer 
-Will accurate long-term weather forecasting help Australians to prepare for drought? Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing. Providing advanced notice of approaching drought can help Australians prepare.
+Which machine learning model will most accuratly predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall foreccast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
 
 ## Data Source 
 Australian Government Bureau of Meteorology
@@ -30,18 +30,66 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Import ‘weather_aus_subset’ into the database
 
 ## Machine Learning Model Summary
-- Importation of libraries
-- Importation of dataset from Postgres
-- Splitting of data column to year, month, and day for regression preparation
-- Check for bucketing requirements
-- Update “RainToday” and “Rain Tommorow” columns to binary values
-- TBD: Possibility of handling class imbalance
-- Drop unnecessary columns and handle missing data
-- Apply OneHotEncoder
-- Declare variables and split into test/train
-- Scale data
-- Define machine learning model: evaluation of Randomforest, GBM, and  Logistic
-- Model validation: Accuracy Report, Confusion Matrix and Classification report
+For machine learning piece, we decided to create two types of models:
+
+1) Binary Classification Model for Predicting Rain Tomorrow
+2) Linear Regression model to predict the amount of Rainfall in mm for a given day
+
+For each option above, different models were compared to find the best fit to achieve the desired results.
+
+### Prelimiary Data Processing
+Data clean up involved the following steps:
+- Data was downloaded from Kaggle
+- We opted to use data from 2011-2016 for the model due to the availability of consistent and valid data points distribution for each year.
+- Handling of null/missing values by exploring three different solutions:
+    1)  Drop all null values in rows and columns
+    2)  Substitute null values with 9999
+    3)  Substitute numeric null columns with mean and non-numeric null columns with mode
+
+    **Recommendation:** TBD.
+- Handling Date Column: Date column was split and replaced by year, month and day columns
+- RainToday and RainTomorrow were converted from object (yes/no) columns to binary (1/0) values 
+
+### Feature Engineering and Selection
+
+**Binary Classification Model:** 
+- Categorical columns were encoded using OneHotEncoder
+- Target variable for the model: RainTomorrow
+- Training/Testing Data Split: We decided to use 80% of data for training and 20% for testing due to higher precision and accuracy score
+- Data was scaled using standed scaler
+- Class imbalance was addressed using Ramdom Oversampling due to high precision score as compared to SMOTE and SMOTEENN
+- Feature selection process was accomplished by using a combination of seaborn heatmap and model's feature importance 
+
+**Linear Regression:**
+- Training/Testing Data Split: We decided to do 70/30 split for Train and Test dataset for better precision.
+- Data was scaled using standed scaler
+- Feature selection process was done by using seaborn heatmap
+
+### Model Selection - Random Forest
+
+We decided to use Random Forest for both models due to the following reasons:
+- For our dataset, we believe that precision score is a better measure of model performance as opposed to recall. Random forest produced the highest precision and balanced accuracy scores for the dataset compared to other model evaluated.
+- Random forest is robust against overfitting, outliers and large datasets
+- It works well for classification and regression problems
+- Its easier to work with if the dataset has lots of missing values
+
+However, there are some disadvantages to this model:
+- The model can be difficult to interpret.
+- It may require higher computational power and training time.
+- It can quickly reach a point where more samples may not improve precision/accuracy.
+
+
+## Interactive Visualization and Dashboard Blueprint
+### Interactive map of Australia created on Tableau
+- Drop down menu for viewing rainfall levels by year
+- Viewable on dashboard by creating embedded link and placed in HTML webpage code
+### Linear Regression
+- Actual vs. predicted model chart
+### Binary Model Comparison
+- Random Forest, Gradient Boosting, Logistic Regression
+- F1, Accuracy, Balanced Accuracy, Recall, and Precision scores
+
+
 
 
 
