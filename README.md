@@ -27,7 +27,12 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Loading weatherAus.csv dataset
 - Data pre-processing including dropping unnecessary columns and missing data
 - Creation of database
-- Import ‘weather_aus_clean’ and ‘weather_aus_merge’into the database from AWS S3 buckets
+- Creation of weather_aus_clean database table
+- Import ‘weather_aus_clean’ into the database from AWS S3 buckets
+- Creation of cities_aus database table
+- Import cities_aus.csv into the database from AWS S3 buckets
+- Join weather_aus_clean and cities_aus tables to create a final dataset including geographical data
+- Import ‘weather_aus_merge’into the database from AWS S3 buckets
 
 ## Machine Learning Model Summary
 For machine learning piece, we decided to create two types of models:
