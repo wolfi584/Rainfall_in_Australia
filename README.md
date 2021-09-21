@@ -23,11 +23,24 @@ Australian Government Bureau of Meteorology
 Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
 
 ## Database Integration Summary
-- Importation of pandas, numpy, and datetime
-- Loading weatherAus.csv dataset
-- Data pre-processing including dropping unnecessary columns and missing data
-- Creation of database
-- Import ‘weather_aus_subset’ into the database
+### Import Libraries
+- import warnings
+- import np, pd, dt, cfg, msno, s3fs
+- from squalchemy import psycopg2
+### Import data table from Postgres
+- Import from AWS RDS database
+### Data Analysis
+- df.shape, df.info()
+- replace '9999' with 'null'
+- print values
+### Handle Null Values
+- handle nan in numeric columns
+- handle nan in object columns
+- count null values for each column
+### Drop Unnecessary Columns
+- create, load, and export 'weather_aus_clean' table
+- merage 'weather_aus_clean' and "cities_aus' table
+- create 'weather_aus_merge' table
 
 ## Machine Learning Model Summary
 For machine learning piece, we decided to create two types of models:
