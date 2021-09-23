@@ -22,6 +22,14 @@ Australian Government Bureau of Meteorology
 ## Communication Protocols
 Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
 
+## Resources
+- **Data File:**
+- **Images:**
+- **Database:**
+- **Machine Learning:**
+- **Presentation:**
+
+
 ## Database Integration Summary
 
 ### Import Libraries
@@ -55,40 +63,43 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Import ‘weather_aus_merge’into the database from AWS S3 buckets
 
 ## Machine Learning Model Summary
-For machine learning piece, we decided to create two types of models:
+We decided to create two types of machine learning models:
 
-- Binary classification model for predicting Rain Tomorrow
-- Regression model to predict the amount of Rainfall in mm for a given day
+- Binary classification model: to predict Rain Tomorrow
+- Regression model: to predict the amount of Rainfall in mm for a given day
 
-For each option above, different models were compared to find the best fit to achieve the desired results.
+For each option above, different models were compared to find the best fit.
 
 ### Prelimiary Data Processing
-Data clean up involved the following steps:
-- Data was downloaded from Kaggle
-- We opted to use data from 2011-2016 for the model due to the availability of consistent and valid data points distribution for each year.
-- Handling of null/missing values was done by exploring three different solutions:
+Data clean up steps:
+- Source: Data was downloaded from Kaggle
+- Dataset: Used data from 2011-2016 for the model due to the availability of consistent and valid data points for each year.
+- Null/missing values handling: Explored the following options:
     1)  Drop all null values in rows and columns
     2)  Substitute null values with 9999
     3)  Substitute numeric null columns with mean and non-numeric null columns with mode
 
-    **Recommendation:** TBD.
-- Handling Date Column: Date column was split and replaced by year, month and day columns
-- RainToday and RainTomorrow were converted from object (yes/no) columns to binary (1/0) values 
+    **Recommendation:**  Models achieved best results using the following resolutions:
+    - Binary Classification: Substitute null with 9999
+    - Linear Regression: Drop all null values
+
+- Handling Date: Column was split and replaced by year, month and day.
+- RainToday and RainTomorrow: Converted to binary (1/0) values
 
 ### Feature Engineering and Selection
 
 **Binary Classification Model:** 
-- Categorical columns were encoded using OneHotEncoder
+- OneHotEncoder to encode categorical columns
 - Target variable for the model: RainTomorrow
-- Training/Testing Data Split: We decided to use 80% of data for training and 20% for testing due to higher precision and accuracy score
-- Data was scaled using standed scaler
-- Class imbalance was addressed using Ramdom Oversampling due to high precision score as compared to SMOTE and SMOTEENN
-- Feature selection process was accomplished by using a combination of seaborn heatmap and model's feature importance 
+- Training/Testing Data Split: 80/20 due to higher precision and accuracy score
+- Standed Scaler to scale the data
+- Ramdom Oversampling to address class imbalance due to high precision score as compared to SMOTE and SMOTEENN
+- Used seaborn heatmap and model's feature importance for Feature selection.
 
 **Linear Regression:**
-- Training/Testing Data Split: We decided to do 70/30 split for Train and Test dataset for better precision.
-- Data was scaled using standed scaler
-- Feature selection process was done by using seaborn heatmap
+- Training/Testing Data Split: 70/30 split for better precision.
+- Standed Scaler to scale the data
+- Used seaborn heatmap for feature selection
 
 ### Model Selection - Random Forest
 
