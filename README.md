@@ -22,6 +22,14 @@ Australian Government Bureau of Meteorology
 ## Communication Protocols
 Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
 
+## Resources
+- **Data File:**
+- **Images:**
+- **Database:**
+- **Machine Learning:**
+- **Presentation:**
+
+
 ## Database Integration Summary
 
 ### Import Libraries
