@@ -104,7 +104,7 @@ Data clean up steps:
 - Ramdom Oversampling to address class imbalance due to high precision score as compared to SMOTE and SMOTEENN
 - Used seaborn heatmap and model's feature importance for Feature selection.
 
-**Linear Regression:**
+**Regression Model:**
 - Training/Testing Data Split: 70/30 split for better precision.
 - Standed Scaler to scale the data
 - Used seaborn heatmap for feature selection
