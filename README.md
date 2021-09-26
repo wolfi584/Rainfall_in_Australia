@@ -127,10 +127,8 @@ Confusion Matrix:
 <img src="Images/confusion_matrix.png" width=200 align=center>
 <br />
 <br />
-<br />
 Classification Reports:
 <img src="Images/classification_report.png" width=700 align=center>
-<br />
 <br />
 <br />
 
