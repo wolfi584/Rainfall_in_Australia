@@ -20,22 +20,20 @@ Which machine learning model will most accuratly predict rainfall levels in Aust
 - **Data Source:**
     - Australian Government Bureau of Meteorology
     - Kaggle
-- **Data File:**
-- **Images:**
-- **Database:**
+- **Data File:** Resource folder
+- **Images:** Images folder
+- **Database:** Database folder
 - **Machine Learning:**
-- **Presentation:**
+    - Binary_Classofication_ML_Model.ipynb
+    - Linear_Regression_ML_Model.ipynb
+- **Presentation:**  https://docs.google.com/presentation/d/1w0MmaOXJMiDFEL7quWrSZXPZw0b0G9-CIMJHzALCI7E/edit#slide=id.p
+- **Dashboard URL:**  https://therainfall.in/
 
 ## Tools/Technologies
-- Database:
-- Machine Learning:
-- Visualization:
-
-
-## Communication Protocols
-Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
-
-
+- **Datasource:** AWS S3 Bucket
+- **Database:** AWS RDS Postgres
+- **Machine Learning:** sklearn.metrics, Python, Jupyter Notebook
+- **Visualization:** HTML, Tableau
 
 
 ## Database Integration Summary
