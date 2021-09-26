@@ -176,7 +176,7 @@ The image below shows Jan 2017 actual  vs predicted rainfall (in mm) in Albury u
 
 <br />
 <br />
-<img src="Images/rf_regression_jan_2017_predictions.png" width=700 align=center>
+<img src="Images/rf_regression_jan_2017_predictions.png" width=300 align=center>
 <br /><br />
 
 ## Interactive Visualization and Dashboard Blueprint
