@@ -127,10 +127,8 @@ Confusion Matrix:
 <img src="Images/confusion_matrix.png" width=200 align=center>
 <br />
 <br />
-<br />
 Classification Reports:
 <img src="Images/classification_report.png" width=700 align=center>
-<br />
 <br />
 <br />
 
@@ -148,9 +146,38 @@ It has been established that precision is a better measure of binary classificat
 <img src="Images/binary_classification_model_comparison.png" width=700 align=center>
 <br />
 <br />
-<br />
 
 ### Regression Model Analysis
+
+To find appropriate model to predict rainfall in mm, seaborn distplot was used to visual data distribution of predicted values vs actual values.
+
+Random forest regression model produced better results than linear regression.
+
+<br />
+RF --> Random Forest
+<br />
+LF --> Linear Regression
+
+<br />
+<br />
+<img src="Images/linear_regression_model_comparison.png" width=700 align=center>
+<br />
+<br />
+
+r-squared values:
+- Linear Regression r-squared: 0.16802
+- Random Forest r-squared: 0.32257
+
+ R square value helps determine how well dependent variable value is explained by the determining(independent) variables of the dataset. Higher R square value indicates better model and results.
+
+ In our case, this value is 32% which is on the lower side, but it can be improved by using data with fewer null values and having additional features such as evaporation, dew point etc.
+
+The image below shows Jan 2017 actual  vs predicted rainfall (in mm) in Albury using random forest:
+
+<br />
+<br />
+<img src="Images/rf_regression_jan_2017_predictions.png" width=700 align=center>
+<br /><br />
 
 ## Interactive Visualization and Dashboard Blueprint
 ### Interactive map of Australia created on Tableau
