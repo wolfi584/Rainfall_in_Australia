@@ -16,8 +16,19 @@ Lack of rainfall has a negative impact on nature and the economy, and drought ha
 ## Questions We Hope to Answer 
 Which machine learning model will most accuratly predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall foreccast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
 
-## Data Source 
-Australian Government Bureau of Meteorology
+## Resources
+- Data Source: 
+    - Australian Government Bureau of Meteorology
+    - Kaggle
+- Code file: 
+- Images:
+
+
+## Tools/Technology
+- Database:
+- Machine Learning:
+- Visualization:
+
 
 ## Communication Protocols
 Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
