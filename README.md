@@ -80,7 +80,7 @@ Data clean up steps:
     3)  Substitute numeric null columns with mean and non-numeric null columns with mode
 
     **Recommendation:**  Models achieved best results using the following resolutions:
-    - Binary Classification: Substitute null with 9999
+    - Binary Classification: Substitute null values with 9999
     - Linear Regression: Drop all null values
 
 - Handling Date: Column was split and replaced by year, month and day.
@@ -114,6 +114,43 @@ However, there are some disadvantages to this model:
 - It may require higher computational power and training time.
 - It can quickly reach a point where more samples may not improve precision/accuracy.
 
+### Binary Classification Model Analysis
+
+**How did the model perform?**
+
+Confusion matrix and classification reports were used to evaluate model's performance
+
+
+<br />
+Confusion Matrix: 
+<br />
+<img src="Images/confusion_matrix.png" width=200 align=center>
+<br />
+<br />
+<br />
+Classification Reports:
+<img src="Images/classification_report.png" width=700 align=center>
+<br />
+<br />
+<br />
+
+- Model's accuracy score is 76% - this means it accurately predicts rain on a given day 76% of the time
+- For this model, precision score holds more importance to properly plan for droughts. High recall means high false positives which in turn can inaccurately miss drought predictions.
+- Model precision: 89% for no-rain, 72% for rain. This implies that model correctly predicts no-rain 89% of the time, and rain 72% of the time.
+
+Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional geological components and  data will lower percentage of missing values.
+
+**Comparison with Other Models**
+
+It has been established that precision is a better measure of binary classification model performance where random forest outperforms other models.
+
+<br />
+<img src="Images/binary_classification_model_comparison.png" width=700 align=center>
+<br />
+<br />
+<br />
+
+### Regression Model Analysis
 
 ## Interactive Visualization and Dashboard Blueprint
 ### Interactive map of Australia created on Tableau
