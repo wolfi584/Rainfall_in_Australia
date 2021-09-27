@@ -16,11 +16,25 @@ Lack of rainfall has a negative impact on nature and the economy, and drought ha
 ## Questions We Hope to Answer 
 Which machine learning model will most accuratly predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall foreccast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
 
-## Data Source 
-Australian Government Bureau of Meteorology
+## Resources
+- **Data Source:**
+    - Australian Government Bureau of Meteorology
+    - Kaggle
+- **Data File:** Resource folder
+- **Images:** Images folder
+- **Database:** Database folder
+- **Machine Learning:**
+    - Binary_Classofication_ML_Model.ipynb
+    - Linear_Regression_ML_Model.ipynb
+- **Presentation:**  https://docs.google.com/presentation/d/1w0MmaOXJMiDFEL7quWrSZXPZw0b0G9-CIMJHzALCI7E/edit#slide=id.p
+- **Dashboard URL:**  https://therainfall.in/
 
-## Communication Protocols
-Our team plans to use Slack and Zoom as primary communication means. Besides class hours, we also plan on having meetings during the week as needed. 
+## Tools/Technologies
+- **Datasource:** AWS S3 Bucket
+- **Database:** AWS RDS Postgres
+- **Machine Learning:** sklearn.metrics, Python, Jupyter Notebook
+- **Visualization:** HTML, Tableau
+
 
 ## Database Integration Summary
 
@@ -55,40 +69,43 @@ Our team plans to use Slack and Zoom as primary communication means. Besides cla
 - Import ‘weather_aus_merge’into the database from AWS S3 buckets
 
 ## Machine Learning Model Summary
-For machine learning piece, we decided to create two types of models:
+We decided to create two types of machine learning models:
 
-- Binary classification model for predicting Rain Tomorrow
-- Regression model to predict the amount of Rainfall in mm for a given day
+- Binary classification model: to predict Rain Tomorrow
+- Regression model: to predict the amount of Rainfall in mm for a given day
 
-For each option above, different models were compared to find the best fit to achieve the desired results.
+For each option above, different models were compared to find the best fit.
 
 ### Prelimiary Data Processing
-Data clean up involved the following steps:
-- Data was downloaded from Kaggle
-- We opted to use data from 2011-2016 for the model due to the availability of consistent and valid data points distribution for each year.
-- Handling of null/missing values was done by exploring three different solutions:
+Data clean up steps:
+- Source: Data was downloaded from Kaggle
+- Dataset: Used data from 2011-2016 for the model due to the availability of consistent and valid data points for each year.
+- Null/missing values handling: Explored the following options:
     1)  Drop all null values in rows and columns
     2)  Substitute null values with 9999
     3)  Substitute numeric null columns with mean and non-numeric null columns with mode
 
-    **Recommendation:** TBD.
-- Handling Date Column: Date column was split and replaced by year, month and day columns
-- RainToday and RainTomorrow were converted from object (yes/no) columns to binary (1/0) values 
+    **Recommendation:**  Models achieved best results using the following resolutions:
+    - Binary Classification: Substitute null values with 9999
+    - Linear Regression: Drop all null values
+
+- Handling Date: Column was split and replaced by year, month and day.
+- RainToday and RainTomorrow: Converted to binary (1/0) values
 
 ### Feature Engineering and Selection
 
 **Binary Classification Model:** 
-- Categorical columns were encoded using OneHotEncoder
+- OneHotEncoder to encode categorical columns
 - Target variable for the model: RainTomorrow
-- Training/Testing Data Split: We decided to use 80% of data for training and 20% for testing due to higher precision and accuracy score
-- Data was scaled using standed scaler
-- Class imbalance was addressed using Ramdom Oversampling due to high precision score as compared to SMOTE and SMOTEENN
-- Feature selection process was accomplished by using a combination of seaborn heatmap and model's feature importance 
+- Training/Testing Data Split: 80/20 due to higher precision and accuracy score
+- Standed Scaler to scale the data
+- Ramdom Oversampling to address class imbalance due to high precision score as compared to SMOTE and SMOTEENN
+- Used seaborn heatmap and model's feature importance for Feature selection.
 
-**Linear Regression:**
-- Training/Testing Data Split: We decided to do 70/30 split for Train and Test dataset for better precision.
-- Data was scaled using standed scaler
-- Feature selection process was done by using seaborn heatmap
+**Regression Model:**
+- Training/Testing Data Split: 70/30 split for better precision.
+- Standed Scaler to scale the data
+- Used seaborn heatmap for feature selection
 
 ### Model Selection - Random Forest
 
@@ -103,6 +120,70 @@ However, there are some disadvantages to this model:
 - It may require higher computational power and training time.
 - It can quickly reach a point where more samples may not improve precision/accuracy.
 
+### Binary Classification Model Analysis
+
+**How did the model perform?**
+
+Confusion matrix and classification reports were used to evaluate model's performance
+
+
+<br />
+Confusion Matrix: 
+<br />
+<img src="Images/confusion_matrix.png" width=200 align=center>
+<br />
+<br />
+Classification Reports:
+<img src="Images/classification_report.png" width=700 align=center>
+<br />
+<br />
+
+- Model's accuracy score is 76% - this means it accurately predicts rain on a given day 76% of the time
+- For this model, precision score holds more importance to properly plan for droughts. High recall means high false positives which in turn can inaccurately miss drought predictions.
+- Model precision: 89% for no-rain, 72% for rain. This implies that model correctly predicts no-rain 89% of the time, and rain 72% of the time.
+
+Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional geological components and  data will lower percentage of missing values.
+
+**Comparison with Other Models**
+
+It has been established that precision is a better measure of binary classification model performance where random forest outperforms other models.
+
+<br />
+<img src="Images/binary_classification_model_comparison.png" width=700 align=center>
+<br />
+<br />
+
+### Regression Model Analysis
+
+To find appropriate model to predict rainfall in mm, seaborn distplot was used to visual data distribution of predicted values vs actual values.
+
+Random forest regression model produced better results than linear regression.
+
+<br />
+RF --> Random Forest
+<br />
+LF --> Linear Regression
+
+<br />
+<br />
+<img src="Images/linear_regression_model_comparison.png" width=700 align=center>
+<br />
+<br />
+
+r-squared values:
+- Linear Regression r-squared: 0.16802
+- Random Forest r-squared: 0.32257
+
+ R square value helps determine how well dependent variable value is explained by the determining(independent) variables of the dataset. Higher R square value indicates better model and results.
+
+ In our case, this value is 32% which is on the lower side, but it can be improved by using data with fewer null values and having additional features such as evaporation, dew point etc.
+
+The image below shows Jan 2017 actual  vs predicted rainfall (in mm) in Albury using random forest:
+
+<br />
+<br />
+<img src="Images/rf_regression_jan_2017_predictions.png" width=300 align=center>
+<br /><br />
 
 ## Interactive Visualization and Dashboard Blueprint
 ### Interactive map of Australia created on Tableau
