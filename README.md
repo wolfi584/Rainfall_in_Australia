@@ -1,7 +1,7 @@
 # Rainfall_in_Australia
 
 ## Selected Topic 
-Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2011-2016. Different machine learning methods will be tested to determine which model most accuratley predicts rainfall in Australia for 2017. Forecasted results will then be compared with actual 2017 weather records. All information used during this project is from the same data source (Australian Government Bureau of Meteorology). 
+Analysis of daily rainfall levels in each of Australia’s six states (New South Wales, Queensland, South Australia, Tasmania, Victoria, and Western Australia) from the years 2011-2016. Different machine learning methods will be tested to determine which model most accurately predicts rainfall in Australia for 2017. Forecasted results will then be compared with actual 2017 weather records. All information used during this project is from the same data source (Australian Government Bureau of Meteorology). 
 
 ## Explanation for Topic Selection 
 Lack of rainfall has a negative impact on nature and the economy, and drought has always been a problem in Australia. Extreme dryness can cause the following:
@@ -14,7 +14,7 @@ Lack of rainfall has a negative impact on nature and the economy, and drought ha
 -	Water shortages
 
 ## Questions We Hope to Answer 
-Which machine learning model will most accuratly predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall foreccast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
+Which machine learning model will most accurately predict rainfall levels in Australia during the year 2017? Attaining an accurate rainfall forecast in advance can help Australians prepare for potential drought. Some methods of drought preparation include water conservation, irrigation systems, crop diversification, and product sourcing.
 
 ## Resources
 - **Data Source:**
@@ -98,7 +98,7 @@ Data clean up steps:
 - OneHotEncoder to encode categorical columns
 - Target variable for the model: RainTomorrow
 - Training/Testing Data Split: 80/20 due to higher precision and accuracy score
-- Standed Scaler to scale the data
+- Standard Scaler to scale the data
 - Ramdom Oversampling to address class imbalance due to high precision score as compared to SMOTE and SMOTEENN
 - Used seaborn heatmap and model's feature importance for Feature selection.
 
@@ -142,7 +142,7 @@ Classification Reports:
 - For this model, precision score holds more importance to properly plan for droughts. High recall means high false positives which in turn can inaccurately miss drought predictions.
 - Model precision: 89% for no-rain, 72% for rain. This implies that model correctly predicts no-rain 89% of the time, and rain 72% of the time.
 
-Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional meterological features and data will lower percentage of missing values.
+Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional meteorological features and data will lower percentage of missing values.
 
 **Comparison with Other Models**
 
