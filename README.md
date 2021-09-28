@@ -142,7 +142,7 @@ Classification Reports:
 - For this model, precision score holds more importance to properly plan for droughts. High recall means high false positives which in turn can inaccurately miss drought predictions.
 - Model precision: 89% for no-rain, 72% for rain. This implies that model correctly predicts no-rain 89% of the time, and rain 72% of the time.
 
-Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional geological components and  data will lower percentage of missing values.
+Overall, model's precision percentage is conservative which means that its predicted rainy days count will be lower than the count of days it actually rained. This can be acceptable as the intention is to not overestimate rainfall. However, model's performance can be improved with additional meterological features and data will lower percentage of missing values.
 
 **Comparison with Other Models**
 
@@ -196,6 +196,18 @@ The image below shows Jan 2017 actual  vs predicted rainfall (in mm) in Albury u
 - F1, Accuracy, Balanced Accuracy, Recall, and Precision scores
 
 
+## Conclusion
+- Random Forest model produced the most accurate results for both binary classification and linear regression forms
+- The results would be more accurate if:
+    - There were less null values in the data
+    - Adding more features, including other weather attributes (ie. wind, sunshine, evaporation, dew point) to the data set
+    - Different types of machine learning models were tested to see if they had a better fit than the models used in this analysis
+
+
+## Recommendations
+- It would be interesting to see performance results using deep learning model
+- Having live data to test with via an API call 
+- Adding more weather features
 
 
 
