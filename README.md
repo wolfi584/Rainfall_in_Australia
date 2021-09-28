@@ -33,7 +33,7 @@ Which machine learning model will most accuratly predict rainfall levels in Aust
 - **Datasource:** AWS S3 Bucket
 - **Database:** AWS RDS Postgres
 - **Machine Learning:** sklearn.metrics, Python, Jupyter Notebook
-- **Visualization:** HTML, Tableau
+- **Visualization:** HTML, Tableau, WordPress
 
 
 ## Database Integration Summary
