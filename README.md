@@ -105,7 +105,7 @@ Data clean up steps:
 The following process was repeated for feature selection to identify correct and important features to improve model precision:
 
 <br />
-<img src="Images/feature_engineering.png" width=700 align=center>
+<img src="Images/feature_engineering.png" width=300 align=center>
 <br />
 <br />
 
