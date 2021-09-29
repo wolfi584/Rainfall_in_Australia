@@ -103,7 +103,7 @@ Data clean up steps:
 - Used seaborn heatmap and model's feature importance for Feature selection.
 
 **Regression Model:**
-- Training/Testing Data Split: 70/30 split for better precision.
+- Training/Testing Data Split: 70/30 split for better precision. Model performance leveled off at 70/30. 
 - Standed Scaler to scale the data
 - Used seaborn heatmap for feature selection
 
@@ -183,7 +183,8 @@ The image below shows Jan 2017 actual  vs predicted rainfall (in mm) in Albury u
 <br />
 <br />
 <img src="Images/rf_regression_jan_2017_predictions.png" width=300 align=center>
-<br /><br />
+<br />
+<br />
 
 ## Interactive Visualization and Dashboard Blueprint
 ### Interactive map of Australia created on Tableau
