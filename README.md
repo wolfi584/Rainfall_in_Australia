@@ -103,7 +103,7 @@ Data clean up steps:
 - Used seaborn heatmap and model's feature importance for Feature selection.
 
 **Regression Model:**
-- Training/Testing Data Split: 70/30 split for better precision.
+- Training/Testing Data Split: 70/30 split for better precision. Model performance leveled off at 70/30. 
 - Standed Scaler to scale the data
 - Used seaborn heatmap for feature selection
 
