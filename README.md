@@ -102,7 +102,7 @@ Data clean up steps:
 - Ramdom Oversampling to address class imbalance due to high precision score as compared to SMOTE and SMOTEENN
 - Used seaborn heatmap and model's feature importance for Feature selection.
 
-The following process was repeated for feature selection to identify correct and important features to improve model precision:
+The following feature selection process was repeated until correct and important features were identified to help improve model precision:
 
 <br />
 <img src="Images/feature_engineering.png" width=300 align=center>
