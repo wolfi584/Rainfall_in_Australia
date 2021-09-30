@@ -100,10 +100,10 @@ Data clean up steps:
 - Training/Testing Data Split: 80/20 due to higher precision and accuracy score
 - Standard Scaler to scale the data
 - Ramdom Oversampling to address class imbalance due of the following reasons:
-    - SMOTE can be heavily influenced by outliers.
+    - SMOTE can be heavily influenced by outliers
     - Undersampling causes loss of data and even though the dataset reasonably sized, we did not feel comfortable using undersampling
     - Random Oversampling produced the highest precision score compared to SMOTE and SMOTEENN
-- Used seaborn heatmap and model's feature importance for Feature selection.
+- Used seaborn heatmap and model's feature importance for Feature selection
 
 The following feature selection process was repeated until correct and important features were identified to help improve model precision:
 
